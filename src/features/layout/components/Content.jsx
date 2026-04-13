@@ -31,6 +31,10 @@ export default function Content() {
         Potencia tu experiencia gaming con lo mejor del mercado 🔥
       </Typography>
 
+      <Typography variant="body1" sx={{ marginBottom: 5 }}>
+        https://github.com/PinedaAgudelo2003/taller-3react
+      </Typography>
+
       <Typography variant="h4" sx={{ marginBottom: 3 }}>
         Productos Destacados
       </Typography>
