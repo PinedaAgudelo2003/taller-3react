@@ -58,4 +58,4 @@ La interfaz de Novazone incluye:
   
 ## Datos importantes del creador
 - **Nombre:** Brahian Pineda
-- **Fecha:** Marzo 2026 
+- **Fecha:** Abril 2026 
