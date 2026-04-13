@@ -1,7 +1,7 @@
-# Novazone
+# Nuzlux Store Plus
 
 ## Descripción
-Novazone es una tienda online desarrollada con **React.js** y **Material-UI**, que permite a los usuarios explorar productos, agregarlos a favoritos y realizar compras de manera rápida y segura.  
+Nuzlux Store Plus es una tienda online desarrollada con **React.js** y **Material-UI**, que permite a los usuarios explorar productos, agregarlos a favoritos y realizar compras de manera rápida y segura.  
 El proyecto busca ofrecer una experiencia de usuario intuitiva y moderna, con un diseño responsivo para dispositivos móviles y escritorio.
 
 ## Características principales
