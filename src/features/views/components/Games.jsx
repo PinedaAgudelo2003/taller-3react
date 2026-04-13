@@ -1,7 +1,7 @@
 import { Box, Typography, Card, CardContent, CardMedia, Button } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useFavorites } from "../../auth/context/FavoritesContext";
+import CartButton from "../../auth/components/CartButton";
 
 const juegos = [
   { id: 17, nombre: "Resident Evil Requiem", imagen: "/imagenes/ResidentEvilRequiem.jpg", precio: "$292.552" },
@@ -54,21 +54,9 @@ export default function Games() {
 
              <Box sx={{ display: "flex", gap: 1, mt: 2 }}>
 
-  <Button
-    variant="contained"
-    startIcon={<ShoppingCartIcon />}
-    sx={{
-      flex: 1,
-      backgroundColor: "#2563eb",
-      color: "#fff",
-      textTransform: "none",
-      "&:hover": { backgroundColor: "#1d4ed8" }
-    }}
-  >
-    Comprar
-  </Button>
+               <CartButton producto={producto} />
 
-  <Button
+               <Button
     variant={isFavorite(producto.id) ? "outlined" : "contained"}
     color="secondary"
     startIcon={<FavoriteIcon />}

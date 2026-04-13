@@ -1,7 +1,7 @@
-import { Box, Typography, Card, CardContent, CardMedia, Button, Stack } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardMedia, Button } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useFavorites } from "../../auth/context/FavoritesContext";
+import CartButton from "../../auth/components/CartButton";
 
 const destacados = [
   { id: 14, nombre: "PlayStation 5", imagen: "/imagenes/ps5.jpg", precio: "$2.800.000" },
@@ -70,15 +70,9 @@ export default function Content() {
 
               <Box sx={{ display: "flex", gap: 1, mt: 2 }}>
 
-              <Button
-                variant="contained"
-                startIcon={<ShoppingCartIcon />}
-                sx={{ flex: 1, backgroundColor: "#2563eb", color: "#fff", textTransform: "none", "&:hover": { backgroundColor: "#1d4ed8" } }}
-              >
-                Comprar
-              </Button>
+                <CartButton producto={producto} />
 
-              <Button
+                <Button
                 variant={isFavorite(producto.id) ? "outlined" : "contained"}
                 color="secondary"
                 startIcon={<FavoriteIcon />}

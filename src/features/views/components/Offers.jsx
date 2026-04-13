@@ -1,7 +1,7 @@
 import { Box, Typography, Card, CardContent, CardMedia, CardActions, Button } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useFavorites } from "../../auth/context/FavoritesContext";
+import CartButton from "../../auth/components/CartButton";
 const ofertas = [
   { id: 10, nombre: "Teclado Mecánico RGB - 20% OFF", imagen: "/imagenes/teclado.jpg", precio: "$280.000" },
   { id: 11, nombre: "Mouse Gamer - 15% OFF", imagen: "/imagenes/mouse1.jpg", precio: "$153.000" },
@@ -23,21 +23,9 @@ export default function Offers() {
           </CardContent>
           <CardActions sx={{ display: "flex", gap: 2, padding: 2 }}>
 
-  <Button
-    variant="contained"
-    startIcon={<ShoppingCartIcon />}
-    sx={{
-      flex: 1,
-      background: "linear-gradient(45deg,#2563eb,#1d4ed8)",
-      color: "#fff",
-      textTransform: "none",
-      fontWeight: "bold"
-    }}
-  >
-    COMPRAR
-  </Button>
+            <CartButton producto={producto} />
 
-  <Button
+            <Button
     variant={isFavorite(producto.id) ? "outlined" : "contained"}
     color="secondary"
     startIcon={<FavoriteIcon />}

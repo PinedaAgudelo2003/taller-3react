@@ -7,9 +7,11 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 import { useFavorites } from "../../auth/context/FavoritesContext";
+import { useCarrito } from "../../auth/context/carritoContext";
 
 export const Header = () => {
   const { favorites } = useFavorites(); // Este estado siempre refleja localStorage
+  const { totalProductos } = useCarrito();
 
   return (
     <AppBar position="static" sx={{ background: "linear-gradient(90deg, #0b3d91, #0f4fa3)" }}>
@@ -43,10 +45,15 @@ export const Header = () => {
               <FavoriteIcon />
             </Badge>
           </IconButton>
-          <IconButton sx={{ color: "#00e5ff" }}><ShoppingBagIcon /></IconButton>
+
+          <IconButton sx={{ color: "#00e5ff" }} component={NavLink} to="/mybuys">
+            <Badge badgeContent={totalProductos} color="secondary" showZero>
+              <ShoppingBagIcon />
+            </Badge>
+          </IconButton>
 
           <IconButton sx={{ color: "#00e5ff" }} component={NavLink} to="/myaccount">
-          <PersonOutlineIcon />
+            <PersonOutlineIcon />
           </IconButton>
         </Box>
       </Toolbar>
